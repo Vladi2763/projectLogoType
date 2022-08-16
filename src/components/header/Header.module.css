@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
+  height: 82px;
+  border-bottom: 1px solid #e9e9e9;
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container__menu {
+  position: relative;
+  width: 23px;
+  height: 16px;
+  display: block;
+  cursor: pointer;
+}
+
+.container__menu span,
+.container__menu:after,
+.container__menu:before {
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background: #000000;
+  border-radius: 2px;
+  margin: 0 auto;
+  transition: all 0.2s ease-in;
+}
+
+.container__menu:after,
+.container__menu:before {
+  content: "";
+}
+
+.container__menu span {
+  top: 7px;
+}
+
+.container__menu:after {
+  bottom: 0px;
+}
+
+.container__magnifier {
+  cursor: pointer;
+}
+
+@media (max-width: 1299px) {
+  .container__menu {
+    order: 2;
+  }
+  .container__magnifier {
+    display: none;
+  }
+
+  .header {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+
+  .container__close {
+    width: 25px;
+    height: 20px;
+  }
+
+  .container__close::before {
+    transform: rotate(45deg);
+    transition: all 0.2s ease-in;
+    translate: -1px 8px;
+    height: 3px;
+  }
+
+  .container__close span {
+    transform: rotate(-45deg);
+    transition: all 0.2s ease-in;
+    translate: 0px 2px;
+    height: 3px;
+  }
+
+  .container__close::after {
+    content: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .container__menu {
+    order: 2;
+  }
+  .container__magnifier {
+    display: none;
+  }
+
+  .header {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+
+  .container__close {
+    width: 25px;
+    height: 20px;
+  }
+
+  .container__close::before {
+    transform: rotate(45deg);
+    transition: all 0.2s ease-in;
+    translate: -1px 8px;
+    height: 3px;
+  }
+
+  .container__close span {
+    transform: rotate(-45deg);
+    transition: all 0.2s ease-in;
+    translate: 0px 2px;
+    height: 3px;
+  }
+}
